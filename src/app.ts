@@ -10,6 +10,10 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.get('/', (_, res) => {
+  res.status(200).json({ message: 'Hello World!' });
+});
+
 app.get('/health', (_, res) => {
   res.status(200).json({ status: 'OK' });
 });
