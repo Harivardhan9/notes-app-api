@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 app.get('/', (_, res) => {
-  res.status(200).json({ message: 'Hello World!' });
+  res.status(200).json({ message: 'Hello World! v2' });
 });
 
 app.get('/health', (_, res) => {
