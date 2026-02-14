@@ -6,6 +6,9 @@ export const pool = new Pool({
   password: process.env.POSTGRES_PASSWORD,
   database: process.env.POSTGRES_DB,
   port: Number(process.env.POSTGRES_PORT),
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 export const checkDBConnection = async () => {
